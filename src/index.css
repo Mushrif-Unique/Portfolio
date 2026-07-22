@@ -133,8 +133,9 @@
 
   .reveal {
     opacity: 0;
-    transform: translateY(24px);
-    will-change: transform, opacity;
+    transform: translateY(42px) scale(0.96);
+    filter: blur(8px);
+    will-change: transform, opacity, filter;
   }
 }
 
@@ -145,5 +146,6 @@
   .reveal {
     opacity: 1 !important;
     transform: none !important;
+    filter: none !important;
   }
 }

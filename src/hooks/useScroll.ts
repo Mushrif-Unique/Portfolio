@@ -45,13 +45,15 @@ export function useScrollReveal() {
         const items = group.querySelectorAll<HTMLElement>('.reveal');
         gsap.fromTo(
           items,
-          { opacity: 0, y: 28 },
+          { opacity: 0, y: 42, scale: 0.96, filter: 'blur(8px)' },
           {
             opacity: 1,
             y: 0,
-            duration: 0.8,
-            ease: 'power3.out',
-            stagger: 0.12,
+            scale: 1,
+            filter: 'blur(0px)',
+            duration: 0.9,
+            ease: 'back.out(1.15)',
+            stagger: 0.1,
             scrollTrigger: {
               trigger: group,
               start: 'top 82%',
@@ -64,12 +66,14 @@ export function useScrollReveal() {
       gsap.utils.toArray<HTMLElement>('.reveal:not([data-reveal-group] *)').forEach((el) => {
         gsap.fromTo(
           el,
-          { opacity: 0, y: 28 },
+          { opacity: 0, y: 42, scale: 0.96, filter: 'blur(8px)' },
           {
             opacity: 1,
             y: 0,
-            duration: 0.8,
-            ease: 'power3.out',
+            scale: 1,
+            filter: 'blur(0px)',
+            duration: 0.9,
+            ease: 'back.out(1.15)',
             scrollTrigger: {
               trigger: el,
               start: 'top 85%',

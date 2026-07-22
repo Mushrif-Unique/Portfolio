@@ -18,7 +18,7 @@ import {
 
 export const PROFILE = {
   name: 'Mohamad Mushrif',
-  headline: 'Building reliable software for real-world problems.',
+  headline: 'Engineering reliable software and scalable DevOps solutions.',
   subhead:
     'BICT (Hons) undergraduate and aspiring Cloud, DevOps, and Full-Stack Engineer building secure, scalable web applications.',
   about:
